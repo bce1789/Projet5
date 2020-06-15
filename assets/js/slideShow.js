@@ -8,7 +8,7 @@ function nextSlide() {
     slides[currentSlide].className = 'slide showing';
 }
 
-class SlideShow {
+/* class SlideShow {
     constructor() {
         this.slides = document.querySelectorAll('.slide');
         this.currentSlide = 0;
@@ -19,4 +19,4 @@ class SlideShow {
         this.currentSlide = (this.currentSlide + 1) % this.slides.length;
         this.slides[this.currentSlide].className = 'slide showing';
     }
-}
+} */
