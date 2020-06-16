@@ -46,9 +46,9 @@ ob_start(); ?>
                     <div class="card-body">
                         <a class="card-link" href="https://bce1789.github.io/Webagency/" target="_blank">
                             <ul id="slides">
-                                <li class="slide showing"></li>
-                                <li class="slide "></li>
-                                <li class="slide "></li>
+                                <li class="slide showing"><img src="assets\img\webagency-1.PNG" alt="webagency-one"></li>
+                                <li class="slide"><img src="assets\img\webagency-2.PNG" alt="webagency-two"></li>
+                                <li class="slide"><img src="assets\img\webagency-3.PNG" alt="webagency-three"></li>
                             </ul>
                         </a>
                     </div>
@@ -57,13 +57,29 @@ ob_start(); ?>
             </div>
             <div class="col item-skills">
                 <div class="card">
-                    <div class="card-body"><a class="card-link" href="https://velolib.costeb.fr/" target="_blank"><img class="img-fluid" src="assets/img/bike-loc-2.PNG"></a></div>
+                    <div class="card-body">
+                        <a class="card-link" href="https://velolib.costeb.fr/" target="_blank">
+                            <ul id="slides2">
+                                <li class="slide showing"><img src="assets\img\bike-loc-1.PNG" alt="bike-location-one"></li>
+                                <li class="slide"><img src="assets\img\bike-loc-2.PNG" alt="bike-location-two"></li>
+                                <li class="slide"><img src="assets\img\bike-loc-3.PNG" alt="bike-location-three"></li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
                 <p>Application de location de vélos</p>
             </div>
             <div class="col item-skills">
-                <div class="card">
-                    <div class="card-body"><a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank"><img class="img-fluid" src="assets/img/blog-1.PNG"></a></div>
+            <div class="card">
+                    <div class="card-body">
+                        <a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank">
+                            <ul id="slides3">
+                                <li class="slide showing"><img src="assets\img\blog-1.PNG" alt="blog-writer-one"></li>
+                                <li class="slide"><img src="assets\img\blog-2.PNG" alt="blog-writer-two"></li>
+                                <li class="slide"><img src="assets\img\blog-3.PNG" alt="blog-writer-three"></li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
                 <p>Blog pour un écrivain</p>
             </div>
@@ -72,7 +88,11 @@ ob_start(); ?>
 </div>
 
 <script src="assets/js/slideShow.js">
-const showSlide = new SlideShow;
+</script>
+<script>
+    const showSlide = new SlideShow('#slides');
+    const showSlide2 = new SlideShow('#slides2');
+    const showSlide3 = new SlideShow('#slides3');
 </script>
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>

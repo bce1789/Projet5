@@ -98,10 +98,16 @@ body {
     padding-top: 0px;
 }
 
+.card-body {
+    background-color: rgba(220, 234, 241, 0.8);
+}
+
 
 /* Slideshow */
 
-#slides {
+#slides,
+#slides2,
+#slides3 {
     position: relative;
     height: 150px;
     padding: 0px;
@@ -123,6 +129,10 @@ body {
     transition: opacity 1s;
 }
 
+.slide img {
+    max-width: 100%;
+}
+
 .showing {
     opacity: 1;
     z-index: 2;
@@ -130,18 +140,13 @@ body {
 
 .slide {
     font-size: 40px;
-    padding: 40px;
     box-sizing: border-box;
-    background: #333;
-    color: #fff;
-}
-
-.slide {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.slide:nth-of-type(1) {
+
+/* .slide:nth-of-type(1) {
     background-image: url("../../assets/img/webagency-1.png");
 }
 
@@ -151,7 +156,7 @@ body {
 
 .slide:nth-of-type(3) {
     background-image: url("../../assets/img/webagency-3.png");
-}
+} */
 
 
 /* Slideshow */
