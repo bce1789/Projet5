@@ -34,12 +34,6 @@ ob_start(); ?>
     <div class="container site-section" id="skills-picture">
         <h1>Projets réalisé</h1>
         <p><br></p>
-        <!-- TEST SLIDE -->
-        <div class="blocSlide">
-
-        </div>
-
-        <!-- TEST SLIDE -->
         <div class="row table-skills">
             <div class="col item-skills">
                 <div class="card">
