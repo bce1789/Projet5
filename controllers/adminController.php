@@ -8,4 +8,11 @@ class adminController extends DBconnect
         $dataUser = $recoverUserData->recoverUser();
         include(getcwd() . '/views/admin.php');        
     }
+    public function messageUser()
+    {
+        $id = $_GET['id'];
+        $recoverMessage = new adminModel;
+        $messageFromUser = $recoverMessage->thisMessage($id);
+        include(getcwd() . '/views/adminMessage.php');        
+    }
 }

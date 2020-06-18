@@ -2,11 +2,11 @@
 $title = 'admin';
 ob_start(); ?>
 <div class="container">
-  <div class="jumbotron">
+  <div class="jumbotron background-contact-list">
     <div class="bootstrap_datatables">
       <div class="container py-5">
         <header class="text-center text-black">
-          <h2 class="display-4">Liste des contacts</h2>
+          <h2>Liste des contacts</h2>
         </header>
         <?php
         foreach ($dataUser as $data) {
@@ -34,7 +34,9 @@ ob_start(); ?>
                         </tr>
                       </tbody>
                     </table>
-                    <button>Voir message</button>
+                    <button>
+                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo $data->id; ?>">Voir message</a>
+                    </button>
                   </div>
                 </div>
               </div>
