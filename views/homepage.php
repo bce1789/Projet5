@@ -3,14 +3,22 @@ $title = 'home';
 ob_start(); ?>
 <div id="promo">
     <div class="jumbotron">
-        <h1>Heading text</h1>
+        <h1>Création de site web</h1>
         <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
         <p><a class="btn btn-primary" role="button">Learn more</a></p>
     </div>
 </div>
 <div class="container site-section" id="presentation">
-    <h1>Un titre de présentation</h1>
-    <p id="p_pres"><br>Nullam&nbsp;id&nbsp;dolor&nbsp;id&nbsp;nibh&nbsp;ultricies&nbsp;vehicula&nbsp;ut&nbsp;id&nbsp;elit.<br>Cras&nbsp;justo&nbsp;odio,&nbsp;dapibus&nbsp;ac&nbsp;facilisis&nbsp;in<br>Nullam&nbsp;id&nbsp;dolor&nbsp;id&nbsp;nibh&nbsp;ultricies&nbsp;vehicula&nbsp;ut&nbsp;id&nbsp;elit.<br><br></p>
+    <h1>Qui suis-je?</h1>
+    <div class="row">
+        <p id="p_pres"><br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+            Blanditiis, repellat accusamus.<br> Explicabo minus quod saepe ducimus natus cumque praesentium.<br>
+            Nam quis recusandae aperiam, quae laborum ipsum ad quia delectus hic?<br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br></p>
+        <div class="profil-side">
+            <img class="img-responsive img-profil" src="assets/img/profil-photo-2.jpg" alt="photo-profil" />
+        </div>
+    </div>
 </div>
 <div class="colored-section-skills">
     <div class="container site-section" id="skills">
@@ -40,9 +48,15 @@ ob_start(); ?>
                     <div class="card-body">
                         <a class="card-link" href="https://bce1789.github.io/Webagency/" target="_blank">
                             <ul id="slides">
-                                <li class="slide showing"><img src="assets\img\webagency-1.PNG" alt="webagency-one"></li>
-                                <li class="slide"><img src="assets\img\webagency-2.PNG" alt="webagency-two"></li>
-                                <li class="slide"><img src="assets\img\webagency-3.PNG" alt="webagency-three"></li>
+                                <li class="slide showing">
+                                    <img src="assets\img\webagency-1.PNG" alt="webagency-one">
+                                </li>
+                                <li class="slide">
+                                    <img src="assets\img\webagency-2.PNG" alt="webagency-two">
+                                </li>
+                                <li class="slide">
+                                    <img src="assets\img\webagency-3.PNG" alt="webagency-three">
+                                </li>
                             </ul>
                         </a>
                     </div>
@@ -64,7 +78,7 @@ ob_start(); ?>
                 <p>Application de location de vélos</p>
             </div>
             <div class="col item-skills">
-            <div class="card">
+                <div class="card">
                     <div class="card-body">
                         <a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank">
                             <ul id="slides3">
