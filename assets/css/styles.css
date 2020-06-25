@@ -1,5 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 #logo-site {
@@ -12,6 +14,13 @@ body {
     padding: 40px;
     background: url(../../assets/img/laptop.png) no-repeat;
     background-size: cover;
+    height: 600px;
+}
+
+@media (max-width: 576px) {
+    #promo {
+        height: 500px;
+    }
 }
 
 #promo .jumbotron {
@@ -71,6 +80,21 @@ body {
     .row.table-skills {
         display: inline-block;
     }
+}
+
+.profil-side {
+    max-height: 30%;
+    max-width: 30%;
+    padding: 0;
+}
+
+.img-profil {
+    max-width: 60%;
+    max-height: 60%;
+}
+
+#p_pres {
+    text-align: initial;
 }
 
 .colored-section-skills {
