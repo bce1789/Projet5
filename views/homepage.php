@@ -20,26 +20,38 @@ ob_start(); ?>
         </div>
     </div>
 </div>
-<div class="colored-section-skills">
-    <div class="container site-section" id="skills">
-        <h1>Mes compétences</h1>
-        <p><br></p>
-        <div class="row table-skills">
-            <div class="col item-skills"><i class="fas fa-laptop-code"></i>
-                <h2>Développement</h2>
-                <p>- HTML<br>- CSS<br>- JS<br>- PHP</p>
+<br>
+<!--  anime data aos-->
+<section id="services" class="content-section bg-primary text-white text-center">
+        <div class="container">
+            <div class="content-section-heading">
+                <h3 class="text-secondary mb-0">Services</h3>
+                <h2 class="mb-5">Ce que je propose</h2>
             </div>
-            <div class="col item-skills"><i class="fas fa-sitemap"></i>
-                <h2>Wordpress</h2>
-                <p>Création de site sur mesure.<br><br></p>
-            </div>
-            <div class="col item-skills"><i class="fas fa-palette"></i>
-                <h2>Référencement</h2>
-                <p>Référencement naturel.<br><br><br></p>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300"><i class="icon-screen-smartphone"></i></span>
+                    <h4><strong>Responsive</strong></h4>
+                    <p class="mb-0 size-skills-text">Sites adapté aux tablettes et téléphones</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-delay="250"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="350"><i class="icon-globe"></i></span>
+                    <h4><strong>Développement</strong></h4>
+                    <p class="mb-0 size-skills-text">- HTML<br>- CSS<br>- JS<br>- PHP</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="600"><i class="icon-screen-desktop"></i></span>
+                    <h4><strong>Wordpress</strong></h4>
+                    <p class="mb-0 size-skills-text"><span>Création de site sur mesure&nbsp;</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="850"><i class="icon-social-google"></i></span>
+                    <h4><strong>Référencement</strong></h4>
+                    <p class="mb-0 size-skills-text"><span>Référencement Naturel&nbsp;</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+<!--  -->
+<div class="colored-section-skills">
     <div class="container site-section" id="skills-picture">
+        <br>
         <h1>Projets réalisé</h1>
         <p><br></p>
         <div class="row table-skills">

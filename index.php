@@ -46,4 +46,8 @@ else {
     if ($_GET['action'] == 'login') {
         $securityController->login();
     }
+    //test anime
+    if ($_GET['action'] == 'anime') {
+        $homepageController->anime();
+    }
 }
