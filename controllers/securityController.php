@@ -25,7 +25,7 @@ class securityController {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             }
             header('Location: /P5_benoit_coste/index.php?action=home');
-            //var_dump($_SESSION);
+            var_dump($_SESSION);
             exit;
         }
         header('Location: /P5_benoit_coste/index.php?action=connect');
@@ -41,7 +41,7 @@ class securityController {
     public function signup()
     {
         if (isset($_SESSION['auth'])) {
-            header('Location: /account');
+            header('Location: /P5_benoit_coste/index.php?action=home');
             exit;
         }
         if (!empty($_POST['adminName']) && !empty($_POST['adminPassword']) && !empty($_POST['adminPassword_confirm'])) {

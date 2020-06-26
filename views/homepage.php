@@ -8,25 +8,26 @@ ob_start(); ?>
         <p><a class="btn btn-primary" role="button">Learn more</a></p>
     </div>
 </div>
-<div class="container site-section" id="presentation">
-    <h1>Qui suis-je?</h1>
+<div id="background-presentation">
+<div class="site-section" id="presentation">
+    <h2 class="title-font-size">Qui suis-je?</h2>
     <div class="row">
         <p id="p_pres"><br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
             Blanditiis, repellat accusamus.<br> Explicabo minus quod saepe ducimus natus cumque praesentium.<br>
             Nam quis recusandae aperiam, quae laborum ipsum ad quia delectus hic?<br>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br></p>
         <div class="profil-side">
-            <img class="img-responsive img-profil" src="assets/img/profil-photo-2.jpg" alt="photo-profil" />
+            <img class="img-responsive img-profil" src="assets/img/profil-photo-0.png" alt="photo-profil" />
         </div>
     </div>
 </div>
-<br>
+</div>
 <!--  anime data aos-->
 <section id="services" class="content-section bg-primary text-white text-center">
         <div class="container">
             <div class="content-section-heading">
                 <h3 class="text-secondary mb-0">Services</h3>
-                <h2 class="mb-5">Ce que je propose</h2>
+                <h2 class="mb-5 title-font-size">Ce que je propose</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300"><i class="icon-screen-smartphone"></i></span>
@@ -35,7 +36,7 @@ ob_start(); ?>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-delay="250"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="350"><i class="icon-globe"></i></span>
                     <h4><strong>Développement</strong></h4>
-                    <p class="mb-0 size-skills-text">- HTML<br>- CSS<br>- JS<br>- PHP</p>
+                    <p class="mb-0 size-skills-text">- HTML<br>- CSS<br>- JS<br>- PHP<br>- BOOTSTRAP</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="600"><i class="icon-screen-desktop"></i></span>
                     <h4><strong>Wordpress</strong></h4>
@@ -52,7 +53,7 @@ ob_start(); ?>
 <div class="colored-section-skills">
     <div class="container site-section" id="skills-picture">
         <br>
-        <h1>Projets réalisé</h1>
+        <h2 class="mb-5 title-font-size">Projets réalisé</h2>
         <p><br></p>
         <div class="row table-skills">
             <div class="col item-skills">
@@ -114,5 +115,6 @@ ob_start(); ?>
     const showSlide2 = new SlideShow('#slides2');
     const showSlide3 = new SlideShow('#slides3');
 </script>
+
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>
