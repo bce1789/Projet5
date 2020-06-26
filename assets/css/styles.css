@@ -35,11 +35,6 @@ body {
     }
 }
 
-.container.site-section {
-    text-align: center;
-    padding: 60px 0;
-}
-
 #presentation {
     max-width: 800px;
     margin: 0 auto;
@@ -124,6 +119,10 @@ body {
 
 .card-body {
     background-color: rgba(220, 234, 241, 0.8);
+}
+
+.size-skills-text {
+    font-size: 20px;
 }
 
 
