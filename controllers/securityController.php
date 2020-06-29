@@ -22,7 +22,7 @@ class securityController
                 if (!isset($_SESSION['auth']->isAdmin)) {
                     $_SESSION['auth'] = $user;
                     $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
-                    header('Location: /P5_benoit_coste/index.php?action=home');
+                    header('Location: /P5_benoit_coste/index.php?action=admin');
                     exit;
                 } else {
                     //revoir
