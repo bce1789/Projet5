@@ -3,52 +3,73 @@ $title = 'home';
 ob_start(); ?>
 <div id="promo">
     <div class="jumbotron">
-        <h1>Heading text</h1>
+        <h1>Création de site web</h1>
         <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
         <p><a class="btn btn-primary" role="button">Learn more</a></p>
     </div>
 </div>
-<div class="container site-section" id="presentation">
-    <h1>Un titre de présentation</h1>
-    <p id="p_pres"><br>Nullam&nbsp;id&nbsp;dolor&nbsp;id&nbsp;nibh&nbsp;ultricies&nbsp;vehicula&nbsp;ut&nbsp;id&nbsp;elit.<br>Cras&nbsp;justo&nbsp;odio,&nbsp;dapibus&nbsp;ac&nbsp;facilisis&nbsp;in<br>Nullam&nbsp;id&nbsp;dolor&nbsp;id&nbsp;nibh&nbsp;ultricies&nbsp;vehicula&nbsp;ut&nbsp;id&nbsp;elit.<br><br></p>
-</div>
-<div class="colored-section-skills">
-    <div class="container site-section" id="skills">
-        <h1>Mes compétences</h1>
-        <p><br></p>
-        <div class="row table-skills">
-            <div class="col item-skills"><i class="fas fa-laptop-code"></i>
-                <h2>Développement</h2>
-                <p>- HTML<br>- CSS<br>- JS<br>- PHP</p>
-            </div>
-            <div class="col item-skills"><i class="fas fa-sitemap"></i>
-                <h2>Wordpress</h2>
-                <p>Création de site sur mesure.<br><br></p>
-            </div>
-            <div class="col item-skills"><i class="fas fa-palette"></i>
-                <h2>Référencement</h2>
-                <p>Référencement naturel.<br><br><br></p>
-            </div>
+<div id="background-presentation">
+<div class="site-section" id="presentation">
+    <h2 class="title-font-size">Qui suis-je?</h2>
+    <div class="row">
+        <p id="p_pres"><br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+            Blanditiis, repellat accusamus.<br> Explicabo minus quod saepe ducimus natus cumque praesentium.<br>
+            Nam quis recusandae aperiam, quae laborum ipsum ad quia delectus hic?<br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br></p>
+        <div class="profil-side">
+            <img class="img-responsive img-profil" src="assets/img/profil-photo-0.png" alt="photo-profil" />
         </div>
     </div>
-    <div class="container site-section" id="skills-picture">
-        <h1>Projets réalisé</h1>
-        <p><br></p>
-        <!-- TEST SLIDE -->
-        <div class="blocSlide">
-
+</div>
+</div>
+<!--  anime data aos-->
+<section id="services" class="content-section bg-primary text-white text-center">
+        <div class="container">
+            <div class="content-section-heading">
+                <h3 class="text-secondary mb-0">Services</h3>
+                <h2 class="mb-5 title-font-size">Ce que je propose</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300"><i class="icon-screen-smartphone"></i></span>
+                    <h4><strong>Responsive</strong></h4>
+                    <p class="mb-0 size-skills-text">Sites adapté aux tablettes et téléphones</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-delay="250"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="350"><i class="icon-globe"></i></span>
+                    <h4><strong>Développement</strong></h4>
+                    <p class="mb-0 size-skills-text">- HTML<br>- CSS<br>- JS<br>- PHP<br>- BOOTSTRAP</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="600"><i class="icon-screen-desktop"></i></span>
+                    <h4><strong>Wordpress</strong></h4>
+                    <p class="mb-0 size-skills-text"><span>Création de site sur mesure&nbsp;</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="850"><i class="icon-social-google"></i></span>
+                    <h4><strong>Référencement</strong></h4>
+                    <p class="mb-0 size-skills-text"><span>Référencement Naturel&nbsp;</p>
+                </div>
+            </div>
         </div>
-
-        <!-- TEST SLIDE -->
+    </section>
+<!--  -->
+<div class="colored-section-skills">
+    <div class="container site-section" id="skills-picture">
+        <br>
+        <h2 class="mb-5 title-font-size">Projets réalisé</h2>
+        <p><br></p>
         <div class="row table-skills">
             <div class="col item-skills">
                 <div class="card">
                     <div class="card-body">
                         <a class="card-link" href="https://bce1789.github.io/Webagency/" target="_blank">
                             <ul id="slides">
-                                <li class="slide showing"></li>
-                                <li class="slide "></li>
-                                <li class="slide "></li>
+                                <li class="slide showing">
+                                    <img src="assets\img\webagency-1.PNG" alt="webagency-one">
+                                </li>
+                                <li class="slide">
+                                    <img src="assets\img\webagency-2.PNG" alt="webagency-two">
+                                </li>
+                                <li class="slide">
+                                    <img src="assets\img\webagency-3.PNG" alt="webagency-three">
+                                </li>
                             </ul>
                         </a>
                     </div>
@@ -57,13 +78,29 @@ ob_start(); ?>
             </div>
             <div class="col item-skills">
                 <div class="card">
-                    <div class="card-body"><a class="card-link" href="https://velolib.costeb.fr/" target="_blank"><img class="img-fluid" src="assets/img/bike-loc-2.PNG"></a></div>
+                    <div class="card-body">
+                        <a class="card-link" href="https://velolib.costeb.fr/" target="_blank">
+                            <ul id="slides2">
+                                <li class="slide showing"><img src="assets\img\bike-loc-1.PNG" alt="bike-location-one"></li>
+                                <li class="slide"><img src="assets\img\bike-loc-2.PNG" alt="bike-location-two"></li>
+                                <li class="slide"><img src="assets\img\bike-loc-3.PNG" alt="bike-location-three"></li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
                 <p>Application de location de vélos</p>
             </div>
             <div class="col item-skills">
                 <div class="card">
-                    <div class="card-body"><a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank"><img class="img-fluid" src="assets/img/blog-1.PNG"></a></div>
+                    <div class="card-body">
+                        <a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank">
+                            <ul id="slides3">
+                                <li class="slide showing"><img src="assets\img\blog-1.PNG" alt="blog-writer-one"></li>
+                                <li class="slide"><img src="assets\img\blog-2.PNG" alt="blog-writer-two"></li>
+                                <li class="slide"><img src="assets\img\blog-3.PNG" alt="blog-writer-three"></li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
                 <p>Blog pour un écrivain</p>
             </div>
@@ -72,7 +109,12 @@ ob_start(); ?>
 </div>
 
 <script src="assets/js/slideShow.js">
-const showSlide = new SlideShow;
 </script>
+<script>
+    const showSlide = new SlideShow('#slides');
+    const showSlide2 = new SlideShow('#slides2');
+    const showSlide3 = new SlideShow('#slides3');
+</script>
+
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>
