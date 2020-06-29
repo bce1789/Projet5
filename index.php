@@ -46,4 +46,7 @@ else {
     if ($_GET['action'] == 'login') {
         $securityController->login();
     }
+    if ($_GET['action'] == 'logout') {
+        $securityController->logout();
+    }
 }
