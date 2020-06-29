@@ -19,6 +19,7 @@ class securityController
             if ($user == null) {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             } elseif (password_verify($_POST['userPassword'], $user->userPassword)) {
+<<<<<<< HEAD
                 if (!isset($_SESSION['auth']->isAdmin)) {
                     $_SESSION['auth'] = $user;
                     $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
@@ -35,6 +36,18 @@ class securityController
             /* header('Location: /P5_benoit_coste/index.php?action=home');
             var_dump($_SESSION);
             exit; */
+=======
+                $_SESSION['auth'] = $user;
+                $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
+                header('Location: /P5_benoit_coste/index.php?action=admin');
+                exit;
+            } else {
+                $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
+            }
+            header('Location: /P5_benoit_coste/index.php?action=home');
+            var_dump($_SESSION);
+            exit;
+>>>>>>> e188229687b6f9c802b95446880b00fb32490018
         }
         header('Location: /P5_benoit_coste/index.php?action=loginPage');
     }
@@ -42,10 +55,13 @@ class securityController
     {
         unset($_SESSION['auth']);
         header('Location: /P5_benoit_coste/index.php?action=home');
+<<<<<<< HEAD
     }
     public function signupPage()
     {
         include(getcwd() . '/views/signupPage.php');
+=======
+>>>>>>> e188229687b6f9c802b95446880b00fb32490018
     }
     public function signup()
     {
@@ -57,7 +73,11 @@ class securityController
             $errors = array();
             if (($_POST['userPassword']) !== ($_POST['userPassword_confirm'])) {
                 $errors['userPassword'] = '';
+<<<<<<< HEAD
                 $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas';
+=======
+                $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas' ;
+>>>>>>> e188229687b6f9c802b95446880b00fb32490018
             }
             if (empty($errors)) {
                 if (($_POST['userPassword']) === ($_POST['userPassword_confirm'])) {

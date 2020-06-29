@@ -45,6 +45,7 @@ if (!isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
         $securityController->logout();
     }
+<<<<<<< HEAD
     if ($_GET['action'] == 'admin') {
         if ($_SESSION['auth']->isAdmin) {
             $adminController->adminData();
@@ -52,5 +53,7 @@ if (!isset($_GET['action'])) {
             $erreurPageController->erreurPage();
         }
     }
+=======
+>>>>>>> e188229687b6f9c802b95446880b00fb32490018
 }
 
