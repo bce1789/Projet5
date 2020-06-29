@@ -27,9 +27,7 @@ if (!isset($_GET['action'])) {
     if ($_GET['action'] == 'contact/create') {
         $contactController->contactInfo();
     }
-    if ($_GET['action'] == 'admin/message') {
-        $adminController->messageUser();
-    }
+
     if ($_GET['action'] == 'signup') {
         $securityController->signup();
     }
@@ -45,6 +43,14 @@ if (!isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
         $securityController->logout();
     }
+    //admin
+    if ($_GET['action'] == 'admin/message') {
+        if ($_SESSION['auth']->isAdmin) {
+            $adminController->messageUser();
+        } else {
+            $erreurPageController->erreurPage();
+        }
+    }
     if ($_GET['action'] == 'admin') {
         if ($_SESSION['auth']->isAdmin) {
             $adminController->adminData();
@@ -52,5 +58,5 @@ if (!isset($_GET['action'])) {
             $erreurPageController->erreurPage();
         }
     }
-}
-
+    //admin
+}  $erreurPageController->erreurPage();

@@ -4,10 +4,18 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="/P5_benoit_coste/index.php">Accueil</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=admin">Admin</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=contact">Contact</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=signup">S'enregistrer</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=login">Connexion</a></li>
+
+
+                    <?php if (isset($_SESSION['auth'])) { ?>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=logout">Déconnexion</a></li>
+                    <?php } else { ?>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=login">Connexion</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=signup">S'enregistrer</a></li>
+                    <?php }
+                    if (isset($_SESSION['auth']->isAdmin)) { ?>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=admin">Admin</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
