@@ -1,6 +1,7 @@
 <?php
 $title = 'contact';
 ob_start(); ?>
+<p></p>
 <div class="container">
     <div class="jumbotron background-contact-list">
         <div class="contact-clean">

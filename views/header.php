@@ -6,6 +6,8 @@
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="/P5_benoit_coste/index.php">Accueil</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=admin">Admin</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=contact">Contact</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=signup">S'enregistrer</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/P5_benoit_coste/index.php?action=login">Connexion</a></li>
                 </ul>
             </div>
         </div>
