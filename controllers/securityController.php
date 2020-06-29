@@ -1,9 +1,11 @@
-<?php 
+<?php
 require_once('models\securityModel.php');
-class securityController {
+class securityController
+{
 
-    public function loginPage(){
-       include (getcwd().'/views/loginPage.php');
+    public function loginPage()
+    {
+        include(getcwd() . '/views/loginPage.php');
     }
     public function login()
     {
@@ -17,27 +19,34 @@ class securityController {
             if ($user == null) {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             } elseif (password_verify($_POST['userPassword'], $user->userPassword)) {
-                $_SESSION['auth'] = $user;
-                $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
-                header('Location: /P5_benoit_coste/index.php?action=admin');
-                exit;
+                if (!isset($_SESSION['auth']->isAdmin)) {
+                    $_SESSION['auth'] = $user;
+                    $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
+                    header('Location: /P5_benoit_coste/index.php?action=home');
+                    exit;
+                } else {
+                    //revoir
+                    header('Location: /P5_benoit_coste/index.php?action=admin');
+                    exit;
+                }
             } else {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             }
-            header('Location: /P5_benoit_coste/index.php?action=home');
+            /* header('Location: /P5_benoit_coste/index.php?action=home');
             var_dump($_SESSION);
-            exit;
+            exit; */
         }
-        header('Location: /P5_benoit_coste/index.php?action=connect');
+        header('Location: /P5_benoit_coste/index.php?action=loginPage');
     }
     public function logout()
     {
         unset($_SESSION['auth']);
         header('Location: /P5_benoit_coste/index.php?action=home');
     }
-    public function signupPage(){
-        include (getcwd().'/views/signupPage.php');
-     }
+    public function signupPage()
+    {
+        include(getcwd() . '/views/signupPage.php');
+    }
     public function signup()
     {
         if (isset($_SESSION['auth'])) {
@@ -48,7 +57,7 @@ class securityController {
             $errors = array();
             if (($_POST['userPassword']) !== ($_POST['userPassword_confirm'])) {
                 $errors['userPassword'] = '';
-                $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas' ;
+                $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas';
             }
             if (empty($errors)) {
                 if (($_POST['userPassword']) === ($_POST['userPassword_confirm'])) {

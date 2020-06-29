@@ -1,5 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
 #logo-site {
@@ -12,6 +15,13 @@ body {
     padding: 40px;
     background: url(../../assets/img/laptop.png) no-repeat;
     background-size: cover;
+    height: 600px;
+}
+
+@media (max-width: 576px) {
+    #promo {
+        height: 500px;
+    }
 }
 
 #promo .jumbotron {
@@ -26,17 +36,13 @@ body {
     }
 }
 
-.container.site-section {
-    text-align: center;
-    padding: 60px 0;
+#background-presentation {
+    background-color: #f1f7fc;
 }
 
 #presentation {
     max-width: 800px;
     margin: 0 auto;
-}
-
-#presentation {
     padding-bottom: 15px;
 }
 
@@ -64,7 +70,6 @@ body {
 
 .site-section {
     text-align: center;
-    padding: 50px 0 60px;
 }
 
 @media (max-width: 576px) {
@@ -73,12 +78,39 @@ body {
     }
 }
 
+.profil-side {
+    max-height: 30%;
+    max-width: 30%;
+    padding: 0;
+}
+
+.img-profil {
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 100px;
+}
+
+@media (max-width: 576px) {
+    .img-profil {
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: 50px;
+    }
+    #p_pres {
+        padding: 30px;
+    }
+}
+
+#p_pres {
+    text-align: initial;
+}
+
 .colored-section-skills {
     background-color: rgb(241, 247, 252);
 }
 
-.col.item-skills {
-    background-color: rgba(238, 238, 238, 0.63);
+.title-font-size {
+    font-size: 40px;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
@@ -100,6 +132,10 @@ body {
 
 .card-body {
     background-color: rgba(220, 234, 241, 0.8);
+}
+
+.size-skills-text {
+    font-size: 20px;
 }
 
 

@@ -14,11 +14,8 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 if (!isset($_GET['action'])) {
-    
     $homepageController->homepage();
-    
-}
-else {
+} else {
     if ($_GET['action'] == 'home') {
         $homepageController->homepage();
     }
@@ -30,9 +27,6 @@ else {
     }
     if ($_GET['action'] == 'admin/message') {
         $adminController->messageUser();
-    }
-    if ($_GET['action'] == 'admin') {
-        $adminController->adminData();
     }
     if ($_GET['action'] == 'signup') {
         $securityController->signup();
@@ -49,4 +43,14 @@ else {
     if ($_GET['action'] == 'logout') {
         $securityController->logout();
     }
+    if ($_GET['action'] == 'admin') {
+        $adminController->adminData();
+    }
 }
+/* if ($_SESSION['auth']->isAdmin) {
+    if ($_GET['action'] == 'admin') {
+        $adminController->adminData();
+    } else {
+        $homepageController->homepage();
+    }
+} */
