@@ -7,7 +7,6 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic";
 
 /*!
-<<<<<<< HEAD
    * Bootstrap v4.5.0 (https://getbootstrap.com/)
    * Copyright 2011-2020 The Bootstrap Authors
    * Copyright 2011-2020 Twitter, Inc.
@@ -15,15 +14,6 @@
    */
 
  :root {
-=======
-  * Bootstrap v4.5.0 (https://getbootstrap.com/)
-  * Copyright 2011-2020 The Bootstrap Authors
-  * Copyright 2011-2020 Twitter, Inc.
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-  */
-
-:root {
->>>>>>> e188229687b6f9c802b95446880b00fb32490018
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -55,13 +45,8 @@
 }
 
 *,
-<<<<<<< HEAD
  :after,
  :before {
-=======
-:after,
-:before {
->>>>>>> e188229687b6f9c802b95446880b00fb32490018
     box-sizing: border-box
 }
 
@@ -371,11 +356,7 @@ progress {
     -webkit-appearance: none
 }
 
-<<<<<<< HEAD
  ::-webkit-file-upload-button {
-=======
-::-webkit-file-upload-button {
->>>>>>> e188229687b6f9c802b95446880b00fb32490018
     font: inherit;
     -webkit-appearance: button
 }
