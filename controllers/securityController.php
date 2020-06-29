@@ -19,22 +19,18 @@ class securityController
             if ($user == null) {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             } elseif (password_verify($_POST['userPassword'], $user->userPassword)) {
+                $_SESSION['auth'] = $user;
+                $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
                 if (!isset($_SESSION['auth']->isAdmin)) {
-                    $_SESSION['auth'] = $user;
-                    $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
-                    header('Location: /P5_benoit_coste/index.php?action=admin');
+                    header('Location: /P5_benoit_coste/index.php?action=home');
                     exit;
                 } else {
-                    //revoir
                     header('Location: /P5_benoit_coste/index.php?action=admin');
                     exit;
                 }
             } else {
                 $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
             }
-            /* header('Location: /P5_benoit_coste/index.php?action=home');
-            var_dump($_SESSION);
-            exit; */
         }
         header('Location: /P5_benoit_coste/index.php?action=loginPage');
     }
