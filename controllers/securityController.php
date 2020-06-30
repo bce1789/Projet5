@@ -49,7 +49,7 @@ class securityController
             header('Location: /P5_benoit_coste/index.php?action=home');
             exit;
         }
-        if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['userPassword_confirm'])) {
+        if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['userMail']) && !empty($_POST['userPassword_confirm'])) {
             $errors = array();
             if (($_POST['userPassword']) !== ($_POST['userPassword_confirm'])) {
                 $errors['userPassword'] = '';
@@ -59,7 +59,7 @@ class securityController
                 if (($_POST['userPassword']) === ($_POST['userPassword_confirm'])) {
                     $userPassword = password_hash($_POST['userPassword'], PASSWORD_BCRYPT);
                     $signup = new securityModel;
-                    $signup->signup($userPassword, $_POST['userName']);
+                    $signup->signup($userPassword, $_POST['userName'], $_POST['userMail']);
                     $_SESSION['flash']['success'] = 'Votre compte à bien été crée';
                     header('Location: /P5_benoit_coste/index.php?action=loginPage');
                     exit;

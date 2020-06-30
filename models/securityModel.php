@@ -7,10 +7,11 @@ class securityModel extends DBconnect {
         $admin = $findAdminUser->fetch(PDO::FETCH_OBJ);
         return $admin;
     }
-    public function signup($userPassword, $userName){
-        $request = $this->db->prepare('INSERT INTO users(userName, userPassword) VALUES(:userName, :userPassword)');
+    public function signup($userPassword, $userName, $userMail){
+        $request = $this->db->prepare('INSERT INTO users(userName, userPassword, userMail) VALUES(:userName, :userPassword, :userMail)');
         $request->bindvalue(':userName', $userName);
         $request->bindvalue(':userPassword', $userPassword);
+        $request->bindvalue(':userMail', $userMail);
         $request->execute();
     }
 }

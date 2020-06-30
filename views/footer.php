@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-4 footer-navigation">
             <h3><a href="#">Benoit Coste Developper</a></h3>
-            <p class="links"><a href="/P5_benoit_coste/index.php">Accueil</a><strong> · </strong><a href="#">first item</a><strong> · </strong><a href="#">Second item</a><strong> · </strong><a href="#">Third item</a><strong> · </strong><a href="#"></a><strong>&nbsp;</strong><a href="/P5_benoit_coste/index.php?action=contact">Contact</a></p>
+            <p class="links"><a href="/P5_benoit_coste/index.php">Accueil</a><strong> · </strong><a href="#">first item</a><strong> · </strong><a href="/P5_benoit_coste/index.php?action=cgu">Conditions générales d'utilisation</a><strong> · </strong><a href="#">Third item</a><strong> · </strong><a href="#"></a><strong>&nbsp;</strong><a href="/P5_benoit_coste/index.php?action=contact">Contact</a></p>
             <p class="company-name">Benoit Coste © 2020</p>
         </div>
         <div class="col-sm-6 col-md-4 footer-contacts">

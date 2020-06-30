@@ -1,5 +1,5 @@
 <?php
-$title = 'contact';
+$title = 'erreur';
 ob_start(); ?>
 <p></p>
 <div class="container">
