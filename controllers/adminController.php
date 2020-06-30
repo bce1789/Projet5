@@ -1,5 +1,6 @@
 <?php
-require_once('models\adminModel.php');
+require_once('models/adminModel.php');
+//include(getcwd() . 'models\adminModel.php'); 
 class adminController extends DBconnect
 {
     public function adminData()

@@ -8,7 +8,7 @@ class contactController
     }
     public function contactInfo()
     {
-        if (isset($_POST['username'], $_POST['email'], $_POST['locate'], $_POST['message'])) {
+        if (isset($_POST['username'], $_POST['email'], $_POST['rgpd'], $_POST['locate'], $_POST['message'])) {
             $infos = new contactModel;
             $infos->addContactInfo($_POST['username'], $_POST['email'], $_POST['locate'], $_POST['message']);
             header('location: /P5_benoit_coste/index.php?action=contact');
