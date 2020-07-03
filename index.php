@@ -1,11 +1,17 @@
 <?php
-require_once(getcwd() . '/controllers/homepageController.php');
-require_once(getcwd() . '/controllers/contactController.php');
-require_once(getcwd() . '/controllers/adminController.php');
-require_once(getcwd() . '/controllers/securityController.php');
-require_once(getcwd() . '/controllers/erreurPageController.php');
-require_once(getcwd() . '/controllers/cguController.php');
-require_once(getcwd() . '/controllers/testapiController.php');
+use App\controllers\cguController;
+use App\controllers\contactController;
+use App\controllers\homepageController;
+use App\controllers\securityController;
+use App\controllers\adminController;
+use App\controllers\erreurPageController;
+require 'vendor/autoload.php';
+/* require_once(getcwd() . '/classes/controllers/homepageController.php'); */
+// require_once(getcwd() . '/classes/controllers/contactController.php');
+// require_once(getcwd() . '/classes/controllers/adminController.php');
+// require_once(getcwd() . '/classes/controllers/securityController.php');
+// require_once(getcwd() . '/classes/controllers/erreurPageController.php');
+// require_once(getcwd() . '/classes/controllers/cguController.php');
 
 $homepageController = new homepageController;
 $contactController = new contactController;
@@ -13,7 +19,6 @@ $adminController = new adminController;
 $securityController = new securityController;
 $erreurPageController = new erreurPageController;
 $cguController = new cguController;
-$testapiController = new testapiController;
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -51,10 +56,6 @@ if (!isset($_GET['action'])) {
     }
     if ($_GET['action'] == 'cgu') {
         $cguController->cgu();
-    }
-    //test
-    if ($_GET['action'] == 'testapi') {
-        $testapiController->testapi();
     }
     //Gestion des erreurs URL
     if (empty($_GET['action'])) {

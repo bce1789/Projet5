@@ -1,0 +1,14 @@
+{
+    "authors": [{
+            "name": "benoit",
+            "email": "bce.1789@gmail.com"
+        }
+
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "classes/"
+        }
+    },
+    "require": {}
+}

@@ -1,6 +1,7 @@
 <?php
-require_once('models\DBconnect.php');
-
+namespace App\models;
+// require_once('classes/models/DBconnect.php');
+use App\models\DBconnect;
 class contactModel extends DBconnect
 {
     public function addContactInfo($username, $email, $locate, $message)
