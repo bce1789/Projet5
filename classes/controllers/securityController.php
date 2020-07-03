@@ -1,5 +1,7 @@
 <?php
-require_once('models\securityModel.php');
+namespace App\controllers;
+use App\models\securityModel;
+// require_once('classes/models/securityModel.php');
 class securityController
 {
 
