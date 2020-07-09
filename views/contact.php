@@ -9,7 +9,7 @@ ob_start(); ?>
                 <h2 class="text-center">Me contacter</h2>
                 <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Nom" required></div>
                 <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" required></div>
-                <div class="form-group"><input class="form-control" type="text" name="locate" placeholder="Localisation" required></div>
+                <div class="form-group"><input class="form-control" id="ville" type="text" name="locate" placeholder="Localisation" required></div>
                 <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14" required></textarea></div>
                 <div>
                     <input type="radio" id="radio-rgpd" name="rgpd" value="rgpd" required>
@@ -20,5 +20,6 @@ ob_start(); ?>
         </div>
     </div>
 </div>
+
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>

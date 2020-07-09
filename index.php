@@ -1,10 +1,12 @@
 <?php
+
 use App\controllers\cguController;
 use App\controllers\contactController;
 use App\controllers\homepageController;
 use App\controllers\securityController;
 use App\controllers\adminController;
 use App\controllers\erreurPageController;
+
 require 'vendor/autoload.php';
 /* require_once(getcwd() . '/classes/controllers/homepageController.php'); */
 // require_once(getcwd() . '/classes/controllers/contactController.php');
@@ -20,11 +22,11 @@ $securityController = new securityController;
 $erreurPageController = new erreurPageController;
 $cguController = new cguController;
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-
-if (!isset($_GET['action'])) {
+// if (session_status() == PHP_SESSION_NONE) {
+session_start();
+// }
+//rooter IF ELSE
+/* if (!isset($_GET['action'])) {
     $homepageController->homepage();
 } else {
     if ($_GET['action'] == 'home') {
@@ -69,7 +71,7 @@ if (!isset($_GET['action'])) {
         } else {
             $erreurPageController->erreurPage();
         }
-    } 
+    }
     if ($_GET['action'] == 'admin') {
         if ($_SESSION['auth']->isAdmin) {
             $adminController->adminData();
@@ -78,4 +80,63 @@ if (!isset($_GET['action'])) {
         }
     }
     //admin
+} */
+
+// rooter  switch
+$request = null;
+if (isset($_GET['action'])) {
+    $request = strtok($_GET['action'], '=');
+}
+
+switch ($request) {
+    case null:
+        $homepageController->homepage();
+        break;
+    case '':
+        $homepageController->homepage();
+        break;
+    case 'home':
+        $homepageController->homepage();
+        break;
+    case 'contact':
+        $contactController->contact();
+        break;
+    case 'contact/create':
+        $contactController->contactInfo();
+        break;
+    case 'admin/message':
+        $adminController->messageUser();
+        break;
+    case 'signup':
+        $securityController->signup();
+        break;
+    case 'signupPage':
+        $securityController->signupPage();
+        break;
+    case 'loginPage':
+        $securityController->loginPage();
+        break;
+    case 'login':
+        $securityController->login();
+        break;
+    case 'logout':
+        $securityController->logout();
+        break;
+    case 'cgu':
+        $cguController->cgu();
+        break;
+    default:
+        if (isset($_SESSION['auth']) && $_SESSION['auth']->isAdmin) {
+            switch ($request) {
+                case 'admin/message':
+                    $adminController->messageUser();
+                    break;
+                case 'admin':
+                    $adminController->adminData();
+                    break;
+            }
+        } else {
+            $erreurPageController->erreurPage();
+            break;
+        }
 }
