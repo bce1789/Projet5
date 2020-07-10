@@ -5,7 +5,7 @@ use App\models\DBconnect;
 class adminModel extends DBconnect
 {
     public function recoverUser(){
-        $recoverData = $this->db->prepare('SELECT * FROM contact');
+        $recoverData = $this->db->prepare('SELECT * FROM contact ORDER BY dateAjout DESC');
         $recoverData->execute();
         $capturedData = $recoverData->fetchAll(\PDO::FETCH_OBJ);
         return $capturedData;      
