@@ -16,5 +16,9 @@ class adminModel extends DBconnect
         $capturedMessage = $recoverMessage->fetch(\PDO::FETCH_OBJ);
         return $capturedMessage;      
     }
+    public function deleteThisMessage($id){
+        $deleteMessage = $this->db->prepare('DELETE FROM contact WHERE id=?');
+        $deleteMessage->execute(array($id));
+    }
 }
 

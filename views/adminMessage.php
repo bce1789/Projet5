@@ -10,9 +10,13 @@ ob_start(); ?>
           <p>Le : <?= $messageFromUser->dateAjout; ?></p>
         </header>
         <div class="admin-message">
-        <p>
+          <p>
             <?php echo $messageFromUser->message; ?>
-        </p>
+          </p>
+          <button>
+            <a href="/P5_benoit_coste/index.php?action=admin/message/delete&id=<?php echo $messageFromUser->id; ?>">Supprimer</a>
+          </button>
+          <?php var_dump($messageFromUser->id) ?>
         </div>
       </div>
     </div>

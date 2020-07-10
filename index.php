@@ -131,6 +131,9 @@ switch ($request) {
                 case 'admin/message':
                     $adminController->messageUser();
                     break;
+                case 'admin/message/delete':
+                    $adminController->deleteMessage();
+                    break;
                 case 'admin':
                     $adminController->adminData();
                     break;
