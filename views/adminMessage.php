@@ -11,12 +11,11 @@ ob_start(); ?>
         </header>
         <div class="admin-message">
           <p>
-            <?php echo $messageFromUser->message; ?>
+            <?php echo htmlspecialchars($messageFromUser->message); ?>
           </p>
           <button>
-            <a href="/P5_benoit_coste/index.php?action=admin/message/delete&id=<?php echo $messageFromUser->id; ?>">Supprimer</a>
+            <a href="/P5_benoit_coste/index.php?action=admin/message/delete&id=<?php echo htmlspecialchars($messageFromUser->id); ?>">Supprimer</a>
           </button>
-          <?php var_dump($messageFromUser->id) ?>
         </div>
       </div>
     </div>

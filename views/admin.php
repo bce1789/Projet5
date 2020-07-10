@@ -36,7 +36,7 @@ ob_start(); ?>
                       </tbody>
                     </table>
                     <button>
-                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo $data->id; ?>">Voir message</a>
+                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($data->id); ?>">Voir message</a>
                     </button>
                   </div>
                 </div>
