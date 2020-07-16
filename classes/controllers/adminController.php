@@ -1,15 +1,15 @@
 <?php
-
 namespace App\controllers;
-
 use App\models\adminModel;
-// require_once('classes/models/adminModel.php');
+
 class adminController
 {
     public function adminData()
     {
+        $currentPage = $_GET['page'] ?? 1;
+        $perPage = 4;
         $recoverUserData = new adminModel;
-        $dataUser = $recoverUserData->recoverUser();
+        $messagePages = $recoverUserData->recoverUser($currentPage);
         include(getcwd() . '/views/admin.php');
     }
     public function messageUser()

@@ -10,7 +10,8 @@ ob_start(); ?>
           <h2>Liste des contacts</h2>
         </header>
         <?php
-        foreach ($dataUser as $data) {
+        
+        foreach ($messagePages as $message) {
         ?>
           <div class="row py-5">
             <div class="col-lg-10 mx-auto">
@@ -28,15 +29,15 @@ ob_start(); ?>
                       </thead>
                       <tbody>
                         <tr>
-                          <td><?= $data->username ?></td>
-                          <td><?= $data->email ?></td>
-                          <td><?= $data->locate  ?></td>
-                          <td><?= $data->dateAjout ?></td>
+                          <td><?= $message->username ?></td>
+                          <td><?= $message->email ?></td>
+                          <td><?= $message->locate  ?></td>
+                          <td><?= $message->dateAjout ?></td>
                         </tr>
                       </tbody>
                     </table>
                     <button>
-                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($data->id); ?>">Voir message</a>
+                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($message->id); ?>">Voir message</a>
                     </button>
                   </div>
                 </div>
@@ -44,6 +45,11 @@ ob_start(); ?>
             </div>
           </div>
         <?php } ?>
+        <?php  if ($currentPage != 1) { ?>
+        <a href="index.php?action=admin&page=<?= $currentPage - 1 ?>" class="btn btn-primary ml-auto">Page Précédente</a>
+        <?php }  if (count($messagePages) == $perPage) { ?>
+        <a href="index.php?action=admin&page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">Page suivante</a>
+       <?php } ?>
       </div>
     </div>
 
