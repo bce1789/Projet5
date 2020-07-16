@@ -1,14 +1,21 @@
 <?php
 namespace App\models;
-//require_once('classes/models/DBconnect.php');
 use App\models\DBconnect;
+
 class adminModel extends DBconnect
 {
-    public function recoverUser(){
-        $recoverData = $this->db->prepare('SELECT * FROM contact ORDER BY dateAjout DESC');
-        $recoverData->execute();
-        $capturedData = $recoverData->fetchAll(\PDO::FETCH_OBJ);
-        return $capturedData;      
+    public function recoverUser($currentPage){
+        $currentPage = (int)$currentPage;
+        $count = (int)$this->db->query('SELECT COUNT(id) FROM contact')->fetch(\PDO::FETCH_NUM)[0];
+        $perPage = 4;
+        $pages = ceil($count / $perPage);
+        $offset = $perPage * ($currentPage - 1);
+        $messageSelected = $this->db->prepare("SELECT * FROM contact ORDER BY dateAjout DESC LIMIT :offset, :perPage");
+        $messageSelected->bindParam(':offset', $offset, \PDO::PARAM_INT);
+        $messageSelected->bindParam(':perPage', $perPage, \PDO::PARAM_INT);
+        $messageSelected->execute();  
+        $posts = $messageSelected->fetchAll(\PDO::FETCH_OBJ);
+        return $posts;
     }
     public function thisMessage($id){
         $recoverMessage = $this->db->prepare('SELECT * FROM contact WHERE id = :id');

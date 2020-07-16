@@ -1,7 +1,6 @@
 <?php
 namespace App\controllers;
 use App\models\contactModel;
-// include('classes/models/contactModel.php');
 class contactController
 {
     public function contact()

@@ -1,6 +1,5 @@
 <?php
 namespace App\models;
-// require_once('classes/models/DBconnect.php');
 use App\models\DBconnect;
 class contactModel extends DBconnect
 {
