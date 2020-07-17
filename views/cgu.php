@@ -11,8 +11,8 @@ ob_start(); ?>
                     <p>
                         <br>En vigueur au 30/06/2020<br>
                         Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par benoit coste et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».
-                        Les présentes CGU sont accessibles sur le site à la rubrique «CGU».
-                        Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « Je reconnais avoir lu et compris les CGU et je les accepte ».
+                        Les présentes CGU sont accessibles sur le site à la rubrique «conditions générales d'utilisation».
+                        Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : « J'accepte que mes données personnelles soient gardées et utilisées par le titulaire du site à des fins de prises de contacts ».
                         En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à l'accès des services proposés par le site.
                         https://web-developpeur.costeb.fr se réserve le droit de modifier unilatéralement et à tout moment le contenu des présentes CGU.
                         <br>
