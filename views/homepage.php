@@ -102,7 +102,6 @@ ob_start(); ?>
         </div>
     </div>
 </div>
-
 <script src="assets/js/slideShow.js">
 </script>
 <script>
@@ -110,6 +109,5 @@ ob_start(); ?>
     const showSlide2 = new SlideShow('#slides2');
     const showSlide3 = new SlideShow('#slides3');
 </script>
-
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>
