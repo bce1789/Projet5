@@ -21,7 +21,7 @@
             <br>
             <h4>A propos</h4>
             <p> Site crée par Benoit COSTE. </p>
-            <div class="social-links social-icons"><a href="https://www.linkedin.com/in/benoit-coste-438005199/"><i class="fa fa-linkedin"></i></a><a href="https://github.com/bce1789/Projet4"><i class="fa fa-github"></i></a></div>
+            <div class="social-links social-icons"><a href="https://www.linkedin.com/in/benoit-coste-438005199/" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://github.com/bce1789/Projet4" target="_blank"><i class="fa fa-github"></i></a></div>
         </div>
     </div>
 </footer>

@@ -1,5 +1,6 @@
 <?php
 $title = 'home';
+$meta = 'Créateur de site web, site sur mesure, développement web et référencement naturel. Services de développement web localisé en Drôme Ardèche. Venez vous renseigner.';
 ob_start(); ?>
 <div id="promo">
     <div class="jumbotron">
@@ -13,10 +14,12 @@ ob_start(); ?>
         <h2 class="title-font-size">Qui suis-je?</h2>
         <div class="row">
             <p id="p_pres"><br><br>Je m'appel Benoit Coste j’habite dans la région de valence dans la drôme.<br>
-                Passionné d’informatique depuis tout petit j’ai acquis une expérience solide,<br> en travaillant dans l’informatique pendant plus de 5 ans.
-                <br>J’ai ensuite passé le cap et me suis lancé dans le développement web<br> et la programmation.<br>
-                J’ai suivi une formation en ligne avec l’organisme OpenClassroom<br> et j’en apprend plus de jours en jours.<br>
-                Je suis aujourd'hui passionné par le développement web<br> et la création de sites internet.<br></p>
+                Passionné d’informatique depuis tout petit j’ai acquis diverses expérience.<br>
+                Plus de 5 ans d'experiences en travaillant dans l'informatique.<br>
+                J’ai ensuite passé le cap et me suis lancé dans le développement web et la programmation.<br>
+                J’ai suivi une formation en ligne avec l’organisme OpenClassroom.<br>
+                J’en apprend toujours plus de jours en jours.<br>
+                Je suis aujourd'hui passionné par le développement web et la création de site internet.<br></p>
             <div class="profil-side">
                 <img class="img-responsive img-profil" src="assets/img/profil-photo-0.png" alt="photo-profil" />
             </div>
@@ -28,7 +31,7 @@ ob_start(); ?>
     <div class="container">
         <div class="content-section-heading">
             <h3 class="text-secondary mb-0">Services</h3>
-            <h2 class="mb-5 title-font-size">Ce que je propose</h2>
+            <h2 class="mb-5 title-font-size">Mon travail de développeur web</h2>
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-out-up" data-aos-duration="1300"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300"><i class="icon-screen-smartphone"></i></span>
@@ -54,25 +57,25 @@ ob_start(); ?>
 <div class="colored-section-skills">
     <div class="container site-section" id="skills-picture">
         <br>
-        <h2 class="mb-5 title-font-size">Projets réalisé</h2>
+        <h2 class="mb-5 title-font-size">Projets web réalisé</h2>
         <p><br></p>
         <div class="row table-skills">
-        <p class="sub-title-responsive">Site vitrine d'agence web</p>
+        <p class="sub-title-responsive">Site d'office de tourisme de Strasbourg (non-officiel)</p>
             <div class="col item-skills">
-                        <a class="card-link" href="https://bce1789.github.io/Webagency/" target="_blank">
+                        <a class="card-link" href="https://otstrasbourg.costeb.fr/" target="_blank">
                             <ul id="slides">
                                 <li class="slide showing">
-                                    <img src="assets\img\webagency-1.PNG" alt="webagency-one">
+                                    <img src="assets\img\otwp1.PNG" alt="office-tourisme-strasbourg-1">
                                 </li>
                                 <li class="slide">
-                                    <img src="assets\img\webagency-2.PNG" alt="webagency-two">
+                                    <img src="assets\img\otwp2.PNG" alt="office-tourisme-strasbourg-2">
                                 </li>
                                 <li class="slide">
-                                    <img src="assets\img\webagency-3.PNG" alt="webagency-three">
+                                    <img src="assets\img\otwp3.PNG" alt="office-tourisme-strasbourg-3">
                                 </li>
                             </ul>
                         </a>
-                        <p class="sub-title">Site vitrine d'agence web</p>       
+                        <p class="sub-title">Site d'office de tourisme de Strasbourg (non-officiel)</p>       
             </div>
             <p class="sub-title-responsive" >Application de location de vélos</p>
             <div class="col item-skills">
@@ -99,7 +102,6 @@ ob_start(); ?>
         </div>
     </div>
 </div>
-
 <script src="assets/js/slideShow.js">
 </script>
 <script>
@@ -107,6 +109,5 @@ ob_start(); ?>
     const showSlide2 = new SlideShow('#slides2');
     const showSlide3 = new SlideShow('#slides3');
 </script>
-
 <?php $content = ob_get_clean(); ?>
 <?php require('views/template.php'); ?>

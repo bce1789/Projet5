@@ -1,5 +1,6 @@
 <?php
 $title = 'cgu';
+$meta = 'Conditions générales d\'utilisation du site internet de Benoit Coste, création et préstation web personnalisé. Informations sur les mentions légales, la collecte des données.';
 ob_start(); ?>
 <p></p>
 <div class="container">

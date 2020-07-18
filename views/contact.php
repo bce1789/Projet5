@@ -1,5 +1,6 @@
 <?php
 $title = 'contact';
+$meta = 'Me contacter afin de réaliser ensemble votre projet web, site internet simple sur mesure avec les fonctionnalités dont vous avez envie. Des réalisations rapide sans se ruiner.';
 ob_start(); ?>
 <p></p>
 <div class="container">

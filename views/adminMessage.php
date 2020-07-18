@@ -1,5 +1,6 @@
 <?php
 $title = 'adminMessage';
+$meta = '';
 ob_start(); ?>
 <div class="container">
   <div class="jumbotron">
