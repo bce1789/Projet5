@@ -3,7 +3,7 @@ namespace App\models;
 use App\models\DBconnect;
 class securityModel extends DBconnect {
     public function login($userName){
-        $findAdminUser = $this->db->prepare('SELECT * FROM users WHERE userName = :userName');
+        $findAdminUser = $this->db->prepare('SELECT * FROM users WHERE userName = :userName OR userMail = :userName');
         $findAdminUser->execute(['userName' => $userName]);
         $admin = $findAdminUser->fetch(\PDO::FETCH_OBJ);
         return $admin;

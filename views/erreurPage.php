@@ -1,5 +1,6 @@
 <?php
 $title = 'erreur';
+$meta = 'Page d\'erreur suite à une mauvaise redirection, ou un lien érroné veuillez réessayer';
 ob_start(); ?>
 <p></p>
 <div class="container">

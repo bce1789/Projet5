@@ -1,5 +1,6 @@
 <?php
 $title = 'signupPage';
+$meta = 'Enregistrement pour recevoir les newsletter et les dernières informations concernant mes prestations web, enregistrez vous afin de ne rien manquer sur les futures opportunités.';
 ob_start(); ?>
 <p></p>
 <div class="container">
