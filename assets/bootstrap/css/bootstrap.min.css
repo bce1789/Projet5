@@ -8671,6 +8671,12 @@ button.bg-dark:hover {
     padding: 3rem!important
 }
 
+@media (max-width: 576px) {
+    .p-5 {
+        padding: 0rem!important
+    }
+}
+
 .pt-5,
 .py-5 {
     padding-top: 3rem!important

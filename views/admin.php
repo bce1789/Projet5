@@ -23,20 +23,20 @@ ob_start(); ?>
                         <tr>
                           <th>Nom</th>
                           <th>Email</th>
-                          <th>Localisation</th>
-                          <th>Dâte</th>
+                          <th class="table-none">Localisation</th>
+                          <th class="table-none">Dâte</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td><?= $message->username ?></td>
                           <td><?= $message->email ?></td>
-                          <td><?= $message->locate  ?></td>
-                          <td><?= $message->dateAjout ?></td>
+                          <td class="table-none"><?= $message->locate  ?></td>
+                          <td class="table-none"><?= $message->dateAjout ?></td>
                         </tr>
                       </tbody>
                     </table>
-                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($message->id);?>"class="btn btn-primary ml-auto">Voir message</a>
+                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($message->id);?>"class="btn-table btn btn-primary ml-auto">Voir message</a>
                   </div>
                 </div>
               </div>
