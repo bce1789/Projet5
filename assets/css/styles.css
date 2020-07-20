@@ -249,6 +249,15 @@ body {
     margin-right: 10px;
 }
 
+@media (max-width: 576px) {
+    .table-none {
+        display: none;
+    }
+    .table-responsive {
+        padding: 10px;
+    }
+}
+
 
 /* footer */
 
