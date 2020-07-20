@@ -67,10 +67,9 @@ switch ($request) {
                     break;
                 case 'admin':
                     $adminController->adminData();
-                    break;          
-            }
-        } else {
-            $erreurPageController->erreurPage();
-            break;
-        }
+                    break;   
+                default:
+                $erreurPageController->erreurPage();       
+            } 
+        } 
 }
