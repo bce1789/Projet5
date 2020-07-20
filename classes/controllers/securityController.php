@@ -1,6 +1,9 @@
 <?php
+
 namespace App\controllers;
+
 use App\models\securityModel;
+
 class securityController
 {
 
@@ -52,9 +55,14 @@ class securityController
         }
         if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['userMail']) && !empty($_POST['userPassword_confirm'])) {
             $errors = array();
+            $regex = ($_POST['userMail']);
             if (($_POST['userPassword']) !== ($_POST['userPassword_confirm'])) {
                 $errors['userPassword'] = '';
                 $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas';
+            }
+            if (!preg_match(" /^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/ ", $regex)) {
+                $errors['userMail'] = '';
+                $_SESSION['flash']['danger'] = 'L\'adresse eMail est invalide';
             }
             if (empty($errors)) {
                 if (($_POST['userPassword']) === ($_POST['userPassword_confirm'])) {
