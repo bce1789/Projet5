@@ -58,6 +58,9 @@ switch ($request) {
     case 'cgu':
         $cguController->cgu();
         break;
+    case 'erreur':
+        $erreurPageController->erreurPage();
+    break;
     default:
         if (!isset($_SESSION['auth']->isAdmin)) {
             $erreurPageController->erreurPage();
