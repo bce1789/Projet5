@@ -1,10 +1,12 @@
 <?php
+
 use App\controllers\cguController;
 use App\controllers\contactController;
 use App\controllers\homepageController;
 use App\controllers\securityController;
 use App\controllers\adminController;
 use App\controllers\erreurPageController;
+
 require 'vendor/autoload.php';
 $homepageController = new homepageController;
 $contactController = new contactController;
@@ -57,6 +59,9 @@ switch ($request) {
         $cguController->cgu();
         break;
     default:
+        if (!isset($_SESSION['auth']->isAdmin)) {
+            $erreurPageController->erreurPage();
+        }
         if (isset($_SESSION['auth']) && $_SESSION['auth']->isAdmin) {
             switch ($request) {
                 case 'admin/message':
@@ -67,9 +72,9 @@ switch ($request) {
                     break;
                 case 'admin':
                     $adminController->adminData();
-                    break;   
+                    break;
                 default:
-                $erreurPageController->erreurPage();       
-            } 
-        } 
+                    $erreurPageController->erreurPage();
+            }
+        }
 }
