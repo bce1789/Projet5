@@ -1,5 +1,7 @@
 <?php
+
 namespace App\controllers;
+
 use App\models\adminModel;
 
 class adminController
@@ -7,10 +9,18 @@ class adminController
     public function adminData()
     {
         $currentPage = $_GET['page'] ?? 1;
-        $perPage = 4;
-        $recoverUserData = new adminModel;
-        $messagePages = $recoverUserData->recoverUser($currentPage);
-        include(getcwd() . '/views/admin.php');
+        if (isset($currentPage) && (is_numeric($currentPage)) ){
+            $perPage = 4;
+            $recoverUserData = new adminModel;
+            $messagePages = $recoverUserData->recoverUser($currentPage);
+            if (!empty($messagePages)) {
+                include(getcwd() . '/views/admin.php');
+            } else {
+                include(getcwd() . '/views/erreurPage.php');
+            }
+        } else {
+            include(getcwd() . '/views/erreurPage.php');
+        }
     }
     public function messageUser()
     {

@@ -36,18 +36,19 @@ ob_start(); ?>
                         </tr>
                       </tbody>
                     </table>
-                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($message->id);?>"class="btn-table btn btn-primary ml-auto">Voir message</a>
+                    <a href="/P5_benoit_coste/index.php?action=admin/message&id=<?php echo htmlspecialchars($message->id); ?>" class="btn-table btn btn-primary ml-auto">Voir message</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         <?php } ?>
-        <?php  if ($currentPage != 1) { ?>
-        <a href="index.php?action=admin&page=<?= $currentPage - 1 ?>" class="btn btn-primary ml-auto"><</a>
-        <?php }  if (count($messagePages) == $perPage) { ?>
-        <a href="index.php?action=admin&page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">></a>
-       <?php } ?>
+        <?php if ($currentPage != 1) { ?>
+          <a href="index.php?action=admin&page=<?= $currentPage - 1 ?>" class="btn btn-primary ml-auto">
+            <</a> <?php }
+                if (count($messagePages) == $perPage) { ?> <a href="index.php?action=admin&page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">>
+          </a>
+        <?php } ?>
       </div>
     </div>
   </div>
