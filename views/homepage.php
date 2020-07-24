@@ -1,6 +1,6 @@
 <?php
 $title = 'home';
-$meta = 'Créateur de site web, site sur mesure, développement web et référencement naturel. Services de développement web localisé en Drôme Ardèche. Venez vous renseigner.';
+$meta = 'Site web sur mesure, développement web et référencement naturel. Services de développement web localisé en Drôme Ardèche. Venez vous renseigner.';
 ob_start(); ?>
 <div id="promo">
     <div class="jumbotron">
@@ -44,11 +44,11 @@ ob_start(); ?>
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="600"><i class="icon-screen-desktop"></i></span>
                 <h4><strong>Wordpress</strong></h4>
-                <p class="mb-0 size-skills-text"><span>Création de site sur mesure&nbsp;</p>
+                <p class="mb-0 size-skills-text"><span>Création de site sur mesure&nbsp;</span></p>
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0" data-aos="zoom-in-up" data-aos-duration="1300" data-aos-delay="500"><span class="mx-auto service-icon rounded-circle mb-3" data-aos="zoom-out-down" data-aos-duration="1300" data-aos-delay="850"><i class="icon-social-google"></i></span>
                 <h4><strong>Référencement</strong></h4>
-                <p class="mb-0 size-skills-text"><span>Référencement Naturel&nbsp;</p>
+                <p class="mb-0 size-skills-text"><span>Référencement Naturel&nbsp;</span></p>
             </div>
         </div>
     </div>
@@ -65,13 +65,13 @@ ob_start(); ?>
                         <a class="card-link" href="https://otstrasbourg.costeb.fr/" target="_blank">
                             <ul id="slides">
                                 <li class="slide showing">
-                                    <img src="assets\img\otwp1.PNG" alt="office-tourisme-strasbourg-1">
+                                    <img src="assets/img/otwp1.PNG" alt="office-tourisme-strasbourg-1">
                                 </li>
                                 <li class="slide">
-                                    <img src="assets\img\otwp2.PNG" alt="office-tourisme-strasbourg-2">
+                                    <img src="assets/img/otwp2.PNG" alt="office-tourisme-strasbourg-2">
                                 </li>
                                 <li class="slide">
-                                    <img src="assets\img\otwp3.PNG" alt="office-tourisme-strasbourg-3">
+                                    <img src="assets/img/otwp3.PNG" alt="office-tourisme-strasbourg-3">
                                 </li>
                             </ul>
                         </a>
@@ -81,9 +81,9 @@ ob_start(); ?>
             <div class="col item-skills">
                         <a class="card-link" href="https://velolib.costeb.fr/" target="_blank">
                             <ul id="slides2">
-                                <li class="slide showing"><img src="assets\img\bike-loc-1.PNG" alt="bike-location-one"></li>
-                                <li class="slide"><img src="assets\img\bike-loc-2.PNG" alt="bike-location-two"></li>
-                                <li class="slide"><img src="assets\img\bike-loc-3.PNG" alt="bike-location-three"></li>
+                                <li class="slide showing"><img src="assets/img/bike-loc-1.PNG" alt="bike-location-one"></li>
+                                <li class="slide"><img src="assets/img/bike-loc-2.PNG" alt="bike-location-two"></li>
+                                <li class="slide"><img src="assets/img/bike-loc-3.PNG" alt="bike-location-three"></li>
                             </ul>
                         </a>
                         <p class="sub-title" >Application de location de vélos</p>
@@ -92,9 +92,9 @@ ob_start(); ?>
             <div class="col item-skills">
                         <a class="card-link" href="https://p4-blog-jean-f.costeb.fr/home" target="_blank">
                             <ul id="slides3">
-                                <li class="slide showing"><img src="assets\img\blog-1.PNG" alt="blog-writer-one"></li>
-                                <li class="slide"><img src="assets\img\blog-2.PNG" alt="blog-writer-two"></li>
-                                <li class="slide"><img src="assets\img\blog-3.PNG" alt="blog-writer-three"></li>
+                                <li class="slide showing"><img src="assets/img/blog-1.PNG" alt="blog-writer-one"></li>
+                                <li class="slide"><img src="assets/img/blog-2.PNG" alt="blog-writer-two"></li>
+                                <li class="slide"><img src="assets/img/blog-3.PNG" alt="blog-writer-three"></li>
                             </ul>
                       </a>
                       <p class="sub-title">Blog pour un écrivain</p>

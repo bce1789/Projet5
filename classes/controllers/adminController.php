@@ -9,7 +9,7 @@ class adminController
     public function adminData()
     {
         $currentPage = $_GET['page'] ?? 1;
-        if (isset($currentPage) && (is_numeric($currentPage)) ){
+        if (isset($currentPage) && (is_numeric($currentPage))) {
             $perPage = 4;
             $recoverUserData = new adminModel;
             $messagePages = $recoverUserData->recoverUser($currentPage);
@@ -25,9 +25,17 @@ class adminController
     public function messageUser()
     {
         $id = $_GET['id'];
-        $recoverMessage = new adminModel;
-        $messageFromUser = $recoverMessage->thisMessage($id);
-        include(getcwd() . '/views/adminMessage.php');
+        if (isset($id) && (is_numeric($id))) {
+            $recoverMessage = new adminModel;
+            $messageFromUser = $recoverMessage->thisMessage($id);
+            if (!empty($messageFromUser->message)) {
+                include(getcwd() . '/views/adminMessage.php');
+            } else {
+                include(getcwd() . '/views/erreurPage.php');
+            }
+        } else {
+            include(getcwd() . '/views/erreurPage.php');
+        }
     }
     public function deleteMessage()
     {

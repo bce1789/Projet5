@@ -1,6 +1,6 @@
 <div class="header-bar">
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><img id="logo-site" src="assets/img/logo.png"><a class="navbar-brand" href="/P5_benoit_coste/index.php"><strong>Benoit Coste </strong>Developpeur</a>
+        <div class="container-fluid"><img id="logo-site" src="assets/img/logo.png" alt="logo"><a class="navbar-brand" href="/P5_benoit_coste/index.php"><strong>Benoit Coste </strong>Developpeur</a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
             <span class="navbar-toggler-icon"></span>
         </button>

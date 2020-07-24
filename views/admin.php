@@ -42,11 +42,14 @@ ob_start(); ?>
               </div>
             </div>
           </div>
-        <?php } ?>
+        <?php } 
+       ?>
         <?php if ($currentPage != 1) { ?>
           <a href="index.php?action=admin&page=<?= $currentPage - 1 ?>" class="btn btn-primary ml-auto">
             <</a> <?php }
-                if (count($messagePages) == $perPage) { ?> <a href="index.php?action=admin&page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">>
+                if (count($messagePages) == $perPage)
+                {
+                  ?> <a href="index.php?action=admin&page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">>
           </a>
         <?php } ?>
       </div>
