@@ -3,16 +3,13 @@ namespace App\models;
 use App\models\DBconnect;
 class securityModel extends DBconnect {
     public function login($userName){
-        $findAdminUser = $this->db->prepare('SELECT * FROM users WHERE userName = :userName OR userMail = :userName');
-        $findAdminUser->execute(['userName' => $userName]);
-        $admin = $findAdminUser->fetch(\PDO::FETCH_OBJ);
-        return $admin;
+        $findUser = $this->db->prepare('SELECT * FROM users WHERE userName = :userName OR userMail = :userName');
+        $findUser->execute(['userName' => $userName]);
+        $user = $findUser->fetch(\PDO::FETCH_OBJ);
+        return $user;
     }
     public function signup($userPassword, $userName, $userMail){
-        $request = $this->db->prepare('INSERT INTO users(userName, userPassword, userMail) VALUES(:userName, :userPassword, :userMail)');
-        $request->bindvalue(':userName', $userName);
-        $request->bindvalue(':userPassword', $userPassword);
-        $request->bindvalue(':userMail', $userMail);
-        $request->execute();
+        $req = $this->db->prepare("INSERT INTO users SET userName = :userName, userPassword = :userPassword, userMail = :userMail"); 
+        $req->execute(['userName' => $userName, 'userPassword' => $userPassword, 'userMail' =>$userMail]);
     }
 }

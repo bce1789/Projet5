@@ -6,7 +6,6 @@ use App\models\securityModel;
 
 class securityController
 {
-
     public function loginPage()
     {
         include(getcwd() . '/views/loginPage.php');
@@ -21,7 +20,7 @@ class securityController
             $login = new securityModel;
             $user = $login->login($_POST['userName']);
             if ($user == null) {
-                $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
+                $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrect';
             } elseif (password_verify($_POST['userPassword'], $user->userPassword)) {
                 $_SESSION['auth'] = $user;
                 $_SESSION['flash']['success'] = 'Vous êtes maintenant connecté';
@@ -56,6 +55,17 @@ class securityController
         if (!empty($_POST['userName']) && !empty($_POST['userPassword']) && !empty($_POST['userMail']) && !empty($_POST['userPassword_confirm'])) {
             $errors = array();
             $regex = ($_POST['userMail']);
+            $login = new securityModel;
+            $user = $login->login($_POST['userName']);
+            if ($user) {
+                $errors['username'] = '';
+                $_SESSION['flash']['danger'] = 'Ce Nom/Pseudo est déjà pris' ;
+            }
+            $user = $login->login($_POST['userMail']);
+            if ($user) {
+                $errors['email'] = '';
+                $_SESSION['flash']['danger'] = 'Cet Email est déjà utilisé' ;
+            }
             if (($_POST['userPassword']) !== ($_POST['userPassword_confirm'])) {
                 $errors['userPassword'] = '';
                 $_SESSION['flash']['danger'] = 'Les mots de passe ne correspondent pas';

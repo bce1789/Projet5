@@ -10,10 +10,10 @@ ob_start(); ?>
     </div>
 </div>
 <div id="background-presentation">
-    <div class="site-section" id="presentation">
+    <div class="site-section" id="presentation">t
         <h2 class="title-font-size">Qui suis-je?</h2>
         <div class="row">
-            <p id="p_pres"><br><br>Je m'appel Benoit Coste j’habite dans la région de valence dans la drôme.<br>
+            <p id="p_pres"><br><br>Je m'appelle Benoit Coste j’habite dans la région de Valence dans la Drôme.<br>
                 Passionné d’informatique depuis tout petit j’ai acquis diverses expérience.<br>
                 Plus de 5 ans d'experiences en travaillant dans l'informatique.<br>
                 J’ai ensuite passé le cap et me suis lancé dans le développement web et la programmation.<br>
