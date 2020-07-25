@@ -13,7 +13,7 @@ ob_start(); ?>
                 <div class="form-group"><input class="form-control" id="ville" type="text" name="locate" placeholder="Localisation" required value="<?= isset($_POST['locate']) ? $_POST['locate'] : '' ?>"></div>
                 <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14" required></textarea></div>
                 <div>
-                    <input type="checkbox" id="radio-rgpd" name="rgpd" value="rgpd" required>
+                    <input type="radio" id="radio-rgpd" name="rgpd" value="rgpd" required>
                     <label for="rgpd">J'accepte que mes données personnelles soient utilisées par le titulaire du site à des fins de prises de contacts</label>
                 </div>
                 <div class="form-group"><button class="btn btn-primary" type="submit">Envoyer</button></div>

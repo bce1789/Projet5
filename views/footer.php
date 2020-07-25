@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-4 footer-navigation">
             <h3>
-                <p>Benoit Coste Developper</p>
+                <p>Benoit Coste Développeur</p>
             </h3>
             <p class="links"><a href="/P5_benoit_coste/index.php">Accueil</a><strong> · </strong><a href="/P5_benoit_coste/index.php?action=cgu">Conditions générales d'utilisation</a>
                 <strong>·</strong>
@@ -25,7 +25,7 @@
         <div class="col-md-4 footer-about">
             <br>
             <h4>A propos</h4>
-            <p> Site crée par Benoit COSTE. </p>
+            <p> Site créé par Benoit COSTE. </p>
             <div class="social-links social-icons"><a href="https://www.linkedin.com/in/benoit-coste-438005199/" target="_blank">
                     <i class="fa fa-linkedin"></i></a><a href="https://github.com/bce1789/Projet4" target="_blank"><i class="fa fa-github"></i></a></div>
         </div>
