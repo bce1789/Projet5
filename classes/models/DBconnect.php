@@ -17,11 +17,11 @@ class DBconnect
 protected $db;
 public function __construct() {
     try {
-            $dbName = 'dbs568855';
-            $host = 'db5000589714.hosting-data.io';
-            $utilisateur = 'dbu969584';
-            $motDePasse = 'Vetitilorler07@';
-            $port='3306';
+            $dbName = '******';
+            $host = '******';
+            $utilisateur = '******';
+            $motDePasse = '******';
+            $port='*****';
             $dns = 'mysql:host='.$host .';dbname='.$dbName.';port='.$port;
             $this->db = new PDO( $dns, $utilisateur, $motDePasse );
           } catch ( Exception $e ) {
